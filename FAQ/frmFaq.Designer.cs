@@ -35,9 +35,9 @@
             this.txtSol = new System.Windows.Forms.RichTextBox();
             this.txtprblmStmt = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.ccbProblmType = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.ccbEnv = new System.Windows.Forms.ComboBox();
             this.Envirnoment = new System.Windows.Forms.Label();
             this.ccbUserRole = new System.Windows.Forms.ComboBox();
             this.lblUserRole = new System.Windows.Forms.Label();
@@ -49,6 +49,7 @@
             this.moduleReq = new System.Windows.Forms.ErrorProvider(this.components);
             this.userRoleReq = new System.Windows.Forms.ErrorProvider(this.components);
             this.prblmStmtReq = new System.Windows.Forms.ErrorProvider(this.components);
+            this.saveMsg = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.moduleReq)).BeginInit();
@@ -65,6 +66,7 @@
             this.btnUpdate.TabIndex = 9;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Visible = false;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnClear
@@ -114,13 +116,13 @@
             this.label5.TabIndex = 12;
             this.label5.Text = "Problem Statement";
             // 
-            // comboBox4
+            // ccbProblmType
             // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(772, 66);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(249, 24);
-            this.comboBox4.TabIndex = 23;
+            this.ccbProblmType.FormattingEnabled = true;
+            this.ccbProblmType.Location = new System.Drawing.Point(772, 66);
+            this.ccbProblmType.Name = "ccbProblmType";
+            this.ccbProblmType.Size = new System.Drawing.Size(249, 24);
+            this.ccbProblmType.TabIndex = 23;
             // 
             // label4
             // 
@@ -132,13 +134,13 @@
             this.label4.TabIndex = 22;
             this.label4.Text = "Problem Type";
             // 
-            // comboBox3
+            // ccbEnv
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(193, 66);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(249, 24);
-            this.comboBox3.TabIndex = 21;
+            this.ccbEnv.FormattingEnabled = true;
+            this.ccbEnv.Location = new System.Drawing.Point(193, 66);
+            this.ccbEnv.Name = "ccbEnv";
+            this.ccbEnv.Size = new System.Drawing.Size(249, 24);
+            this.ccbEnv.TabIndex = 21;
             // 
             // Envirnoment
             // 
@@ -188,12 +190,13 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.saveMsg);
             this.groupBox1.Controls.Add(this.ccbUserRole);
-            this.groupBox1.Controls.Add(this.comboBox4);
+            this.groupBox1.Controls.Add(this.ccbProblmType);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.ccbModule);
-            this.groupBox1.Controls.Add(this.comboBox3);
+            this.groupBox1.Controls.Add(this.ccbEnv);
             this.groupBox1.Controls.Add(this.lblUserRole);
             this.groupBox1.Controls.Add(this.Envirnoment);
             this.groupBox1.Location = new System.Drawing.Point(11, 9);
@@ -241,6 +244,19 @@
             // 
             this.prblmStmtReq.ContainerControl = this;
             // 
+            // saveMsg
+            // 
+            this.saveMsg.AutoSize = true;
+            this.saveMsg.BackColor = System.Drawing.Color.AliceBlue;
+            this.saveMsg.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.saveMsg.ForeColor = System.Drawing.Color.Blue;
+            this.saveMsg.Location = new System.Drawing.Point(195, 101);
+            this.saveMsg.Name = "saveMsg";
+            this.saveMsg.Size = new System.Drawing.Size(64, 25);
+            this.saveMsg.TabIndex = 24;
+            this.saveMsg.Text = "label2";
+            this.saveMsg.Visible = false;
+            // 
             // frmFaq
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -271,9 +287,9 @@
         private System.Windows.Forms.RichTextBox txtSol;
         private System.Windows.Forms.TextBox txtprblmStmt;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.ComboBox ccbProblmType;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox ccbEnv;
         private System.Windows.Forms.Label Envirnoment;
         private System.Windows.Forms.ComboBox ccbUserRole;
         private System.Windows.Forms.Label lblUserRole;
@@ -285,5 +301,6 @@
         private System.Windows.Forms.ErrorProvider moduleReq;
         private System.Windows.Forms.ErrorProvider userRoleReq;
         private System.Windows.Forms.ErrorProvider prblmStmtReq;
+        private System.Windows.Forms.Label saveMsg;
     }
 }
