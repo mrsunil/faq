@@ -21,5 +21,50 @@ namespace FAQ
         {
 
         }
+        
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(ccbModule.Text) == true)
+            {
+                moduleReq.SetError(ccbModule, "Please Select Module");
+            }
+
+            if (string.IsNullOrEmpty(ccbUserRole.Text) == true)
+            {
+                userRoleReq.SetError(ccbUserRole, "Please Select User Role");
+            }
+
+            if (string.IsNullOrEmpty(txtprblmStmt.Text) == true)
+            {
+                prblmStmtReq.SetError(txtprblmStmt, "Please Enter Problem Statement");
+            }
+
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(ccbModule.Text) == true)
+            {
+                moduleReq.SetError(ccbModule, "Please Select Module");
+            }
+
+            if (string.IsNullOrEmpty(ccbUserRole.Text) == true)
+            {
+                userRoleReq.SetError(ccbUserRole, "Please Select User Role");
+            }
+
+            if (string.IsNullOrEmpty(txtprblmStmt.Text) == true)
+            {
+                prblmStmtReq.SetError(txtprblmStmt, "Please Enter Problem Statement");
+            }
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            moduleReq.Clear();
+            userRoleReq.Clear();
+            prblmStmtReq.Clear();
+
+        }
     }
 }

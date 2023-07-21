@@ -33,5 +33,10 @@ namespace FAQ
             frmFaqSearch objFrm = new frmFaqSearch();
             objFrm.ShowDialog();
         }
+
+        private void toolStripMenuItem1_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
