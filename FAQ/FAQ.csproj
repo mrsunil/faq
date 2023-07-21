@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataAccess.cs" />
     <Compile Include="FaqMain.cs">
       <SubType>Form</SubType>
     </Compile>
